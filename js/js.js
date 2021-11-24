@@ -9,6 +9,9 @@ console.log(document.querySelector('.button'));
     const userName = document.querySelector('.user-name');
     const buttonOut = document.querySelector('.button-out');
 
+
+
+
     console.log(modalAuth);
     let login = '';
 
@@ -45,7 +48,6 @@ function notAuthorizer() {
     console.log('Не авторизован');
 
     function logIn(event) {
-        if (logInInput.value.trim()){
         event.preventDefault();
         login = logInInput.value;
         toggleModalAuth();
@@ -54,10 +56,6 @@ function notAuthorizer() {
         logInForm.removeEventListener('submit', logIn);
         logInForm.reset();
         checkAuth();
-    } else {
-        logInInput.style.borderColor ='#ff0000';
-        logInInput.value = '';
-    }
     }
     
     buttonAuth.addEventListener('click', toggleModalAuth());
@@ -74,5 +72,7 @@ function checkAuth() {
 
 }
 checkAuth();
+
+
 
 new WOW().init();
